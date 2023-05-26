@@ -5,7 +5,9 @@ Module: min_operations
 
 The min_operations module provides a function to calculate the minimum number of operations needed to obtain
 a desired count of 'H' characters in a file.
+
 """
+
 
 def min_operations(n):
     """
@@ -26,10 +28,9 @@ def min_operations(n):
         5
         >>> min_operations(9)
         6
-
     """
 
-    if n == 1:
+    if n <= 1:
         return 0
 
     operations = float('inf')
