@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 
 def minOperations(n):
+    """
+    Calculates the minimum number of operations needed to obtain exactly 'n' occurrences of the character 'H' in a file.
+
+    Args:
+        n (int): The desired count of 'H' characters.
+
+    Returns:
+        int: The minimum number of operations required. Returns 0 if it is impossible to achieve 'n'.
+
+    """
     if n == 1:
         return 0
 
