@@ -1,52 +1,32 @@
 #!/usr/bin/python3
+"""Minimum Operations module.
+
+This module contains a function that calculates the fewest number of
+operations needed to result in exactly n H characters in the file.
 
 """
-Module: min_operations
-
-The min_operations module provides a function to calculate the minimum number of operations needed to obtain
-a desired count of 'H' characters in a file.
-
-"""
 
 
-def min_operations(n):
-    """
-    Calculates the minimum number of operations needed to obtain exactly 'n' occurrences of the character 'H' in a file.
+def minOperations(n):
+    """Calculates the fewest number of operations needed
+    to result in exactly n H characters in the file.
 
     Args:
-        n (int): The desired count of 'H' characters.
+        n (int): the number of characters to reach.
 
     Returns:
-        int: The minimum number of operations required. Returns 0 if it is impossible to achieve 'n'.
+        int: the fewest number of operations needed, 0 otherwise.
 
-    Examples:
-        >>> min_operations(1)
-        0
-        >>> min_operations(3)
-        3
-        >>> min_operations(6)
-        5
-        >>> min_operations(9)
-        6
     """
+    chars = n
+    operations = 0
+    div = 2
 
-    if n <= 1:
-        return 0
-
-    operations = float('inf')
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            operations = min(operations, i + min_operations(n // i))
-
-    if operations == float('inf'):
-        return n
+    while chars > 1:
+        if chars % div == 0:
+            operations += div
+            chars /= div
+        else:
+            div += 1
 
     return operations
-
-
-if __name__ == '__main__':
-    # Example usage
-    n = 9
-    result = min_operations(n)
-    print(f"Number of operations to obtain {n} 'H' characters: {result}")
-
