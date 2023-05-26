@@ -28,21 +28,16 @@ def minOperations(n):
 
 
     """
-    if n == 1:
+
+     if n == 1:
         return 0
 
-    num_operations = 0
-    count = 1
+    operations = float('inf')
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            operations = min(operations, i + min_operations(n // i))
 
-    while count < n:
-        if n % count == 0:
-            num_operations += n // count
-            count *n // count
-        else:
-            num_operations += count
-            count += count
+    if operations == float('inf'):
+        return n
 
-    if count == n:
-        return num_operations
-    else:
-        return 0
+    return operations
