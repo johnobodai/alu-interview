@@ -14,3 +14,8 @@ def minOperations(n):
         else:
             num_operations += count
             count += count
+
+    if count == n:
+        return num_operations
+    else:
+        return 0
