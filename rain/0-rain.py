@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+rainwater.py
+This module provides a function for calculating the amount of rainwater retained between walls represented as a relief map.
+"""
 def rain(walls):
     """
     Calculate the amount of rainwater retained between walls represented as a relief map.
