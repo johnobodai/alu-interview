@@ -35,6 +35,6 @@ from rainwater import rain
 
 Contributions are welcome! If you find any issues with the function or have suggestions for improvements, please open an issue or submit a pull request.
 
-License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
