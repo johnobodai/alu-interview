@@ -1,5 +1,3 @@
-markdown
-
 # Rainwater Retention
 
 This repository contains a Python function for calculating the amount of rainwater retained between walls represented as a relief map.
@@ -29,10 +27,11 @@ from rainwater import rain
     walls = [3, 0, 2, 1, 4]
     total_water = rain(walls)
     print("Total water retained:", total_water)
+```
 
     This will calculate the total amount of water retained between the walls and print the result.
 
-Contributing
+## Contributing
 
 Contributions are welcome! If you find any issues with the function or have suggestions for improvements, please open an issue or submit a pull request.
 
