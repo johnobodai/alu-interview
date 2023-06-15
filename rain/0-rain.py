@@ -1,22 +1,27 @@
 #!/usr/bin/python3
 """
 rainwater.py
-This module provides a function for calculating the amount of rainwater retained between walls represented as a relief map.
+This module provides a function for calculating the amount of rainwater
+retained between walls represented as a relief map.
 """
 
 def rain(walls):
     """
-    Calculate the amount of rainwater retained between walls represented as a relief map.
+    Calculate the amount of rainwater retained between walls represented as
+    a relief map.
 
     Parameters:
-    - walls (list): A list of non-negative integers representing the heights of walls with unit width 1.
+    - walls (list): A list of non-negative integers representing the heights
+      of walls with unit width 1.
 
     Returns:
     - Integer: The total amount of rainwater retained.
 
     Functionality:
-    - The walls list represents the cross-section of a relief map, where each integer represents the height of a wall with unit width 1.
-    - The ends of the list (before index 0 and after index walls[-1]) are not considered as walls and will not retain water.
+    - The walls list represents the cross-section of a relief map, where each
+      integer represents the height of a wall with unit width 1.
+    - The ends of the list (before index 0 and after index walls[-1]) are not
+      considered as walls and will not retain water.
     - If the list is empty, the function returns 0.
     """
     if not walls:
