@@ -5,6 +5,7 @@ This module provides a function for calculating the amount of rainwater
 retained between walls represented as a relief map.
 """
 
+
 def rain(walls):
     """
     Calculate the amount of rainwater retained between walls represented as
@@ -45,4 +46,3 @@ def rain(walls):
         total_water += water
 
     return total_water
-
