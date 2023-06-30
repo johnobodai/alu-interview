@@ -2,6 +2,8 @@
 """
 Module: 0-pascal_triangle
 """
+
+
 def pascal_triangle(n):
     """
     Generate Pascal's triangle of n levels.
